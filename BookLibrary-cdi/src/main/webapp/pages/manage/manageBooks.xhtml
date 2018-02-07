@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:rich="http://richfaces.org/rich">
+
+<ui:composition template="/pages/home.xhtml">
+    <ui:define name="content">
+        <h:form id="manageBooksForm">
+            <rich:panel styleClass="container-fluid align">
+                <rich:dataTable id="richTable" rowclasses="greyBg, whiteBg" styleClass="table"
+                                value="#{booksArrayAction.dataModel}"
+                                var="item" keepSaved="true" rows="4">
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="check"/>
+                        <ui:param name="deleteButton" value="deleteCheckedButton"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="name"/>
+                        <ui:param name="header" value="NAME"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="publishedYear"/>
+                        <ui:param name="header" value="PUBLISHED YEAR"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="isbn"/>
+                        <ui:param name="header" value="ISBN"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="publisher"/>
+                        <ui:param name="header" value="PUBLISHER"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="rating"/>
+                        <ui:param name="header" value="RATING"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="createDate"/>
+                        <ui:param name="header" value="CREATE DATE"/>
+                    </ui:include>
+                    <ui:include src="jpaColumn.xhtml">
+                        <ui:param name="bean" value="#{booksArrayAction}"/>
+                        <ui:param name="table" value="richTable"/>
+                        <ui:param name="scroller" value="scroller"/>
+                        <ui:param name="property" value="authors"/>
+                        <ui:param name="header" value="AUTHORS"/>
+                    </ui:include>
+                    <rich:column headerClass="tableHead">
+                        <a4j:commandButton action="/pages/details/detailsBook?faces-redirect=true" value="Details"
+                                           execute="@this">
+                            <a4j:param value="#{item['id']}" assignTo="#{bookAction.bookId}"/>
+                        </a4j:commandButton>
+                    </rich:column>
+                    <rich:column headerClass="tableHead">
+                        <a4j:commandLink styleClass="no-decor" execute="@this" render="@none"
+                                         oncomplete="#{rich:component('confirmPane')}.show()">
+                            <h:graphicImage value="/resources/images/delete.png" alt="delete" height="20px"/>
+                            <a4j:param value="#{item['id']}" assignTo="#{bookAction.bookId}"/>
+                        </a4j:commandLink>
+                    </rich:column>
+                </rich:dataTable>
+                <rich:dataScroller id="scroller" for="richTable" fastStep="3" styleClass="ref"/>
+                <a4j:jsFunction name="remove" action="#{bookAction.deleteBook}" render="richTable scroller"
+                                execute="@this"
+                                oncomplete="#{rich:component('confirmPane')}.hide();"/>
+                <rich:popupPanel id="confirmPane" autosized="true">
+                    Are you sure you want to delete the row?
+                    <a4j:commandButton value="Cancel"
+                                       onclick="#{rich:component('confirmPane')}.hide(); return false;"/>
+                    <a4j:commandButton value="Delete" onclick="remove(); return false;"/>
+                </rich:popupPanel>
+            </rich:panel>
+            <a4j:commandButton render="createGrid, name, isbn, publisher, publishedYear, pickList"
+                               execute="@this"
+                               oncomplete="#{rich:component('createPane')}.show()" value="Add new book"
+                               action="#{bookAction.resetValues}">
+            </a4j:commandButton>
+            <a4j:commandButton disabled="#{booksArrayAction.selectedIds.isEmpty()}"
+                               styleClass="no-decor" execute="@this" render="confirmPaneChecked"
+                               oncomplete="#{rich:component('confirmPaneChecked')}.show()"
+                               value="Delete checked"
+                               id="deleteCheckedButton">
+            </a4j:commandButton>
+            <a4j:jsFunction name="removeChecked" action="#{booksArrayAction.deleteSelected}"
+                            render="richTable scroller deleteCheckedButton"
+                            execute="@this"
+                            oncomplete="#{rich:component('confirmPaneChecked')}.hide();"/>
+            <rich:popupPanel id="confirmPaneChecked" autosized="true">
+                Are you sure you want to delete these books?
+                <rich:panel>
+                    <a4j:repeat value="#{booksArrayAction.selectedBooks}" var="book">
+                        <h:outputText value="#{book.name}"/>
+                        <br/>
+                    </a4j:repeat>
+                </rich:panel>
+                <a4j:commandButton value="Cancel"
+                                   onclick="#{rich:component('confirmPaneChecked')}.hide(); return false;"/>
+                <a4j:commandButton id="confirmDeleteCheckedButton"
+                                   value="Delete"
+                                   onclick="removeChecked(); return false;"
+                                   binding="#{authorsArrayAction.deleteCheckedButton}"/>
+            </rich:popupPanel>
+            <rich:popupPanel header="Add New Book" id="createPane" height="400" width="600"
+                             domElementAttachment="parent">
+                <h:panelGrid columns="3" id="createGrid">
+                    <h:outputText value="Name"/>
+                    <h:inputText value="#{bookAction.book.name}" id="name">
+                        <rich:validator/>
+                    </h:inputText>
+                    <rich:message id="nameMsg" for="name"/>
+                    <h:outputText value="Isbn"/>
+                    <h:inputText value="#{bookAction.book.isbn}" id="isbn" validator="#{isbnValidator.validate}">
+                        <rich:validator/>
+                    </h:inputText>
+                    <rich:message for="isbn"/>
+                    <h:outputText value="Publisher"/>
+                    <h:inputText value="#{bookAction.book.publisher}" id="publisher">
+                        <rich:validator/>
+                    </h:inputText>
+                    <rich:message id="publisherMsg" for="publisher"/>
+                    <h:outputText value="Published Year"/>
+                    <h:inputText value="#{bookAction.book.publishedYear}" id="publishedYear">
+                        <rich:validator/>
+                    </h:inputText>
+                    <rich:message id="publishedYearMsg" for="publishedYear"/>
+                </h:panelGrid>
+
+                <rich:panel style="width:560px;">
+                    <f:facet name="header">
+                        <h:outputText value="Simple pick list"/>
+                    </f:facet>
+                    <rich:pickList id="pickList" value="#{bookAction.authorIds}"
+                                   sourceCaption="Available authors" targetCaption="Selected authors"
+                                   listWidth="165px"
+                                   listHeight="100px" orderable="true">
+                        <f:selectItems value="#{authorsArrayAction.allAuthors}" var="author"
+                                       itemValue="#{author.id}"
+                                       itemLabel="#{author.firstName} #{author.secondName}"/>
+                    </rich:pickList>
+
+                </rich:panel>
+                <a4j:commandButton value="Add" action="#{bookAction.addBook}" render="richTable"
+                                   execute="createPane"
+                                   oncomplete="if (#{facesContext.maximumSeverity==null}) {#{rich:component('createPane')}.hide();}"/>
+                <a4j:commandButton value="Cancel" onclick="#{rich:component('createPane')}.hide(); return false;"/>
+            </rich:popupPanel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

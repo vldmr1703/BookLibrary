@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <book  id="1001" name="First Book" published_year="1980" isbn="978-0-590-52068-4" publisher="Hoakin" create_date="2018-02-01"/>
+    <review  id="1001" comment_text="Owful" commenter_name="reviewer_1" book_id="1001"/>
+    <review  id="1002" comment_text="Great" commenter_name="reviewer_2" book_id="1001"/>
+    <review  id="1003" comment_text="Good" commenter_name="reviewer_3" book_id="1001"/>
+    <review  id="1" comment_text="New" commenter_name="reviewer_4" book_id="1001"/>
+</dataset>

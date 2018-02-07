@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:a4j="http://richfaces.org/a4j">
+<ui:composition>
+    <rich:column sortBy="#{property}" sortOrder="#{bean.sortOrders[property]}"
+                 filterValue="#{bean.filterValues[property]}"
+                 filterExpression="#{property}" filterType="custom" sortType="custom" headerClass="tableHead"
+                 rendered="#{property != 'check'}">
+        <f:facet name="header">
+            <rich:panel style="height: 40px;">
+                <h:outputText value="#{header}"/>
+            </rich:panel>
+            <hr/>
+            <h:outputLabel value="Sorting:" rendered="#{property != 'authors' and property != 'books'}"/>
+            <h:outputLabel value="Sorting: unable" rendered="#{property == 'authors' or property == 'books'}"/>
+            <h:commandLink action="#{bean.toggleSort}" rendered="#{property != 'authors' and property != 'books'}">
+                #{bean.sortOrders[property]}
+                <a4j:ajax render="#{table}"/>
+                <f:setPropertyActionListener target="#{bean.sortProperty}" value="#{property}"/>
+            </h:commandLink>
+            <br/>
+            <h:inputText value="#{bean.filterValues[property]}">
+                <a4j:ajax render="#{table}@body #{scroller}" event="keyup"/>
+            </h:inputText>
+        </f:facet><rich:column width="2%">
+    </rich:column>
+        <h:outputText value="#{item[property]}"
+                      rendered="#{property != 'authors' and property != 'books' and property != 'rating' and property != 'check'}"/>
+        <a4j:repeat rendered="#{property == 'authors'}" value="#{item[property]}" var="author">
+            <a4j:commandLink value=" #{author['firstName']} #{author['secondName']}"
+                             action="/pages/details/detailsAuthor?faces-redirect=true" execute="@this">
+                <a4j:param value="#{author['id']}" assignTo="#{authorAction.authorId}"/>
+            </a4j:commandLink>
+            <br/>
+        </a4j:repeat>
+        <a4j:repeat rendered="#{property == 'books'}" value="#{booksArrayAction.getBooksByAuthorId(item['id'])}"
+                    var="book">
+            <a4j:commandLink value=" #{book['name']}" action="/pages/details/detailsBook?faces-redirect=true"
+                             execute="@this">
+                <a4j:param value="#{book['id']}" assignTo="#{bookAction.bookId}"/>
+            </a4j:commandLink>
+            <br/>
+        </a4j:repeat>
+        <rich:panel rendered="#{property == 'rating'}" styleClass="border">
+            <ui:include src="/pages/rating.xhtml">
+                <ui:param name="rating" value="#{item[property]}"/>
+            </ui:include>
+        </rich:panel>
+    </rich:column>
+    <rich:column headerClass="tableHead" rendered="#{property == 'check'}">
+        <f:facet name="header">
+            <a4j:commandLink execute="@this"
+                             rendered="#{!bean.selectAll}"
+                             action="#{bean.selectAll}"
+                             render="#{table} #{deleteButton}">
+                <h:graphicImage value="/resources/images/unchecked.jpg" alt="unchecked" width="22px"/>
+            </a4j:commandLink>
+            <a4j:commandLink execute="@this"
+                             rendered="#{bean.selectAll}"
+                             action="#{bean.selectAll}"
+                             render="#{table} #{deleteButton}">
+                <h:graphicImage value="/resources/images/checked.png" alt="checked" width="22px"/>
+            </a4j:commandLink>
+        </f:facet>
+        <a4j:commandLink execute="@this"
+                         rendered="#{!bean.selectedIds.contains(item['id'])}"
+                         action="#{bean.select(item['id'])}"
+                         render="#{table} #{deleteButton}">
+            <h:graphicImage value="/resources/images/unchecked.jpg" alt="unchecked" width="22px"/>
+        </a4j:commandLink>
+        <a4j:commandLink execute="@this"
+                         rendered="#{bean.selectedIds.contains(item['id'])}"
+                         action="#{bean.select(item['id'])}"
+                         render="#{table} #{deleteButton}">
+            <h:graphicImage value="/resources/images/checked.png" alt="checked" width="22px"/>
+        </a4j:commandLink>
+    </rich:column>
+</ui:composition>
+</html>

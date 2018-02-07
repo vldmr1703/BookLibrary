@@ -1,0 +1,947 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+<changeSet author="vtkac (generated)" id="1516703820174-1">
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="1"/>
+            <column name="FIRST_NAME" value="Stevenson"/>
+            <column name="SECOND_NAME" value="McConnell"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="2"/>
+            <column name="FIRST_NAME" value="Andrew"/>
+            <column name="SECOND_NAME" value="Hunt"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="3"/>
+            <column name="FIRST_NAME" value="David Thomas"/>
+            <column name="SECOND_NAME" value="Thomas"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="4"/>
+            <column name="FIRST_NAME" value="Brian W"/>
+            <column name="SECOND_NAME" value="Kernighan"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="5"/>
+            <column name="FIRST_NAME" value="Richard"/>
+            <column name="SECOND_NAME" value="Helm"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="6"/>
+            <column name="FIRST_NAME" value="Ralph"/>
+            <column name="SECOND_NAME" value="Johnson"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="7"/>
+            <column name="FIRST_NAME" value="John"/>
+            <column name="SECOND_NAME" value="Vlissides"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="8"/>
+            <column name="FIRST_NAME" value="Dennis M"/>
+            <column name="SECOND_NAME" value="Ritchie"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="9"/>
+            <column name="FIRST_NAME" value="New Author"/>
+            <column name="SECOND_NAME" value="New Author"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="10"/>
+            <column name="FIRST_NAME" value="Charles"/>
+            <column name="SECOND_NAME" value=" Leiserson"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="11"/>
+            <column name="FIRST_NAME" value="Ronald L."/>
+            <column name="SECOND_NAME" value="Rivest"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="12"/>
+            <column name="FIRST_NAME" value="Erich"/>
+            <column name="SECOND_NAME" value="Gamma"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="13"/>
+            <column name="FIRST_NAME" value="Martin"/>
+            <column name="SECOND_NAME" value="Fowler"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="14"/>
+            <column name="FIRST_NAME" value="Ivan"/>
+            <column name="SECOND_NAME" value="Fedak"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="15"/>
+            <column name="FIRST_NAME" value="Alan"/>
+            <column name="SECOND_NAME" value="Moore"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="16"/>
+            <column name="FIRST_NAME" value="Cassandra"/>
+            <column name="SECOND_NAME" value="Clare"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="17"/>
+            <column name="FIRST_NAME" value="Dann"/>
+            <column name="SECOND_NAME" value="Brown"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="18"/>
+            <column name="FIRST_NAME" value="Elie"/>
+            <column name="SECOND_NAME" value="Wiesel"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="19"/>
+            <column name="FIRST_NAME" value="Frank"/>
+            <column name="SECOND_NAME" value="Miller"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="20"/>
+            <column name="FIRST_NAME" value="George"/>
+            <column name="SECOND_NAME" value="Eliot"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="21"/>
+            <column name="FIRST_NAME" value="Glenn"/>
+            <column name="SECOND_NAME" value="Beck"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="22"/>
+            <column name="FIRST_NAME" value="Henry"/>
+            <column name="SECOND_NAME" value="Miller"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="23"/>
+            <column name="FIRST_NAME" value="Helen"/>
+            <column name="SECOND_NAME" value="Fielding"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="24"/>
+            <column name="FIRST_NAME" value="Henrik"/>
+            <column name="SECOND_NAME" value="Ibsen"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="25"/>
+            <column name="FIRST_NAME" value="Henry"/>
+            <column name="SECOND_NAME" value="James"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="26"/>
+            <column name="FIRST_NAME" value="Isaac"/>
+            <column name="SECOND_NAME" value="Asimov"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="27"/>
+            <column name="FIRST_NAME" value="James"/>
+            <column name="SECOND_NAME" value="Frey"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="28"/>
+            <column name="FIRST_NAME" value="Jane"/>
+            <column name="SECOND_NAME" value="Austen"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="29"/>
+            <column name="FIRST_NAME" value="Jeff"/>
+            <column name="SECOND_NAME" value="Kinney"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="30"/>
+            <column name="FIRST_NAME" value="Lord"/>
+            <column name="SECOND_NAME" value="Byron"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="31"/>
+            <column name="FIRST_NAME" value="Marcel"/>
+            <column name="SECOND_NAME" value="Pagnol"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="32"/>
+            <column name="FIRST_NAME" value="Marcel"/>
+            <column name="SECOND_NAME" value="Proust"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="33"/>
+            <column name="FIRST_NAME" value="Martin"/>
+            <column name="SECOND_NAME" value="Amis"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="34"/>
+            <column name="FIRST_NAME" value="Michael"/>
+            <column name="SECOND_NAME" value="Grant"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="35"/>
+            <column name="FIRST_NAME" value="Nick"/>
+            <column name="SECOND_NAME" value="Hornby"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="36"/>
+            <column name="FIRST_NAME" value="Orhan"/>
+            <column name="SECOND_NAME" value="Pamuk"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="37"/>
+            <column name="FIRST_NAME" value="Paul"/>
+            <column name="SECOND_NAME" value="Celan"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="38"/>
+            <column name="FIRST_NAME" value="Rhonda"/>
+            <column name="SECOND_NAME" value="Byrne"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="39"/>
+            <column name="FIRST_NAME" value="Robert"/>
+            <column name="SECOND_NAME" value="Crais"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="40"/>
+            <column name="FIRST_NAME" value="Robert"/>
+            <column name="SECOND_NAME" value="Jordan"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="41"/>
+            <column name="FIRST_NAME" value="Ruskin"/>
+            <column name="SECOND_NAME" value="Bond"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="42"/>
+            <column name="FIRST_NAME" value="Shaun"/>
+            <column name="SECOND_NAME" value="Tann"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="43"/>
+            <column name="FIRST_NAME" value="Kent "/>
+            <column name="SECOND_NAME" value="Stendhal"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="44"/>
+            <column name="FIRST_NAME" value="Suse"/>
+            <column name="SECOND_NAME" value="Grafton"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="45"/>
+            <column name="FIRST_NAME" value="Terry"/>
+            <column name="SECOND_NAME" value="Brooks"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="46"/>
+            <column name="FIRST_NAME" value="Tomas"/>
+            <column name="SECOND_NAME" value="Clancy"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="47"/>
+            <column name="FIRST_NAME" value="Vikram"/>
+            <column name="SECOND_NAME" value="Seth"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="48"/>
+            <column name="FIRST_NAME" value="William"/>
+            <column name="SECOND_NAME" value="Blake"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="49"/>
+            <column name="FIRST_NAME" value="Zane"/>
+            <column name="SECOND_NAME" value="Grey"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+        <insert tableName="AUTHOR">
+            <column name="ID" valueNumeric="50"/>
+            <column name="FIRST_NAME" value="Wole"/>
+            <column name="SECOND_NAME" value="Soyinka"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 14:26:15.0"/>
+        </insert>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703820174-2">
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="1"/>
+            <column name="NAME" value="Code Complete"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2009"/>
+            <column name="ISBN" value="978-0-596-52068-7"/>
+            <column name="PUBLISHER" value="The 5th Publisher"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2012-01-02 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="2"/>
+            <column name="NAME" value="Pragmatic Programmer"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2006"/>
+            <column name="ISBN" value="978-0-596-52068-5"/>
+            <column name="PUBLISHER" value="ABC Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="3"/>
+            <column name="NAME" value="The C Programming Language"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2012"/>
+            <column name="ISBN" value="978-0-596-52068-1"/>
+            <column name="PUBLISHER" value="A M Publishers"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="4"/>
+            <column name="NAME" value="Introduction to algorithms"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2010"/>
+            <column name="ISBN" value="978-0-596-52068-2"/>
+            <column name="PUBLISHER" value="Abhinav"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="5"/>
+            <column name="NAME" value="Design Patterns"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2008"/>
+            <column name="ISBN" value="978-0-596-52068-3"/>
+            <column name="PUBLISHER" value="Academe Research Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="6"/>
+            <column name="NAME" value="Refactoring: Improving the Design of Existing Code"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2007"/>
+            <column name="ISBN" value="978-0-596-52068-4"/>
+            <column name="PUBLISHER" value="Academia Publishing"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="7"/>
+            <column name="NAME" value="The Mythical Man-Month."/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-0-596-52068-6"/>
+            <column name="PUBLISHER" value="Academia Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="8"/>
+            <column name="NAME" value="The Art of Computer Programming"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2005"/>
+            <column name="ISBN" value="978-0-596-52068-8"/>
+            <column name="PUBLISHER" value="Academia Scholarly Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="9"/>
+            <column name="NAME" value="Dragon Book by Aho et al"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2003"/>
+            <column name="ISBN" value="978-0-596-52068-9"/>
+            <column name="PUBLISHER" value="Academic and Business Research Institute"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="10"/>
+            <column name="NAME" value="Effective C++"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2001"/>
+            <column name="ISBN" value="978-0-596-52068-0"/>
+            <column name="PUBLISHER" value="Academic and Scientific Publishing"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="11"/>
+            <column name="NAME" value="Working Effectively with Legacy Code"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2010"/>
+            <column name="ISBN" value="978-2-123-52343-5"/>
+            <column name="PUBLISHER" value="Cloud Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2017-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="12"/>
+            <column name="NAME" value="Peopleware"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="2009"/>
+            <column name="ISBN" value="978-2-123-52343-4"/>
+            <column name="PUBLISHER" value="CSCanada"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2017-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="13"/>
+            <column name="NAME" value="Practices of an Agile Developer"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-123-52343-3"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2011-02-08 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="14"/>
+            <column name="NAME" value="How to Win Friends and Influence People"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-123-52343-2"/>
+            <column name="PUBLISHER" value="Elmer Press"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2012-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="15"/>
+            <column name="NAME" value="Agile Software Development"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-123-52343-1"/>
+            <column name="PUBLISHER" value="Excellent Publishers"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2012-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="16"/>
+            <column name="NAME" value="Thinking and Learning: Refactor Your Wetware"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-123-52343-0"/>
+            <column name="PUBLISHER" value="Global Advanced Research Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2012-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="17"/>
+            <column name="NAME" value="Book"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-123-22343-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="18"/>
+            <column name="NAME" value="The Pragmatic Programmer"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-223-22343-4"/>
+            <column name="PUBLISHER" value="NewBook"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="19"/>
+            <column name="NAME" value="Continuous Delivery"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-323-22341-4"/>
+            <column name="PUBLISHER" value="ABC Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="20"/>
+            <column name="NAME" value="The Clean Coder"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-423-22341-4"/>
+            <column name="PUBLISHER" value="ABC Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="21"/>
+            <column name="NAME" value="Head First Design Patterns"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-523-22341-4"/>
+            <column name="PUBLISHER" value="ABC Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="22"/>
+            <column name="NAME" value="NewBook"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-623-22341-5"/>
+            <column name="PUBLISHER" value="ABC Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="23"/>
+            <column name="NAME" value="NewBook"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-723-22341-4"/>
+            <column name="PUBLISHER" value="ABC Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-16 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="24"/>
+            <column name="NAME" value="xUnit Test Patterns"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-823-22343-4"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="25"/>
+            <column name="NAME" value="Apprenticeship Patterns"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-4"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="26"/>
+            <column name="NAME" value="The Art of Agile Development"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-1"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="27"/>
+            <column name="NAME" value="Honorable Mentions"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-2"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="28"/>
+            <column name="NAME" value="Programming Pearls"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-3"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="29"/>
+            <column name="NAME" value="The software developer?s life manual"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-5"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="30"/>
+            <column name="NAME" value="The Timeless Way of Building"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-6"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="31"/>
+            <column name="NAME" value="Framework Design Guidelines"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-7"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="32"/>
+            <column name="NAME" value="Computational Beauty of Nature."/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-8"/>
+            <column name="PUBLISHER" value="ElmCore Journals"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="33"/>
+            <column name="NAME" value="Object-Oriented Analysis"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-22343-9"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="34"/>
+            <column name="NAME" value="Effective Java"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-42343-0"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="35"/>
+            <column name="NAME" value="The Career Programmer"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-42343-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="36"/>
+            <column name="NAME" value="Paradigms of Artificial Intelligence Programming"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-923-42345-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="37"/>
+            <column name="NAME" value="Masters of Doom"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-122-43343-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="38"/>
+            <column name="NAME" value="The Language and its Implementation"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-152-44343-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="39"/>
+            <column name="NAME" value="Big Ideas from the Computer Ag"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-122-53413-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+        <insert tableName="BOOK">
+            <column name="ID" valueNumeric="40"/>
+            <column name="NAME" value="The Tao of Programming"/>
+            <column name="PUBLISHED_YEAR" valueNumeric="1990"/>
+            <column name="ISBN" value="978-2-122-26423-4"/>
+            <column name="PUBLISHER" value="Halmac Research"/>
+            <column name="RATING" valueNumeric="null"/>
+            <column name="CREATE_DATE" valueDate="2016-02-15 00:00:00.0"/>
+        </insert>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703820174-3">
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="2"/>
+            <column name="AUTHOR_ID" valueNumeric="2"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="3"/>
+            <column name="AUTHOR_ID" valueNumeric="3"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="5"/>
+            <column name="AUTHOR_ID" valueNumeric="5"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="6"/>
+            <column name="AUTHOR_ID" valueNumeric="6"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="7"/>
+            <column name="AUTHOR_ID" valueNumeric="7"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="8"/>
+            <column name="AUTHOR_ID" valueNumeric="8"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="9"/>
+            <column name="AUTHOR_ID" valueNumeric="9"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="10"/>
+            <column name="AUTHOR_ID" valueNumeric="10"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="11"/>
+            <column name="AUTHOR_ID" valueNumeric="11"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="12"/>
+            <column name="AUTHOR_ID" valueNumeric="12"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="13"/>
+            <column name="AUTHOR_ID" valueNumeric="13"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="14"/>
+            <column name="AUTHOR_ID" valueNumeric="14"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="15"/>
+            <column name="AUTHOR_ID" valueNumeric="15"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="16"/>
+            <column name="AUTHOR_ID" valueNumeric="16"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="17"/>
+            <column name="AUTHOR_ID" valueNumeric="17"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="18"/>
+            <column name="AUTHOR_ID" valueNumeric="18"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="19"/>
+            <column name="AUTHOR_ID" valueNumeric="19"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="20"/>
+            <column name="AUTHOR_ID" valueNumeric="20"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="21"/>
+            <column name="AUTHOR_ID" valueNumeric="21"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="23"/>
+            <column name="AUTHOR_ID" valueNumeric="23"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="24"/>
+            <column name="AUTHOR_ID" valueNumeric="24"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="25"/>
+            <column name="AUTHOR_ID" valueNumeric="25"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="26"/>
+            <column name="AUTHOR_ID" valueNumeric="26"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="27"/>
+            <column name="AUTHOR_ID" valueNumeric="27"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="28"/>
+            <column name="AUTHOR_ID" valueNumeric="28"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="29"/>
+            <column name="AUTHOR_ID" valueNumeric="29"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="30"/>
+            <column name="AUTHOR_ID" valueNumeric="30"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="31"/>
+            <column name="AUTHOR_ID" valueNumeric="31"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="32"/>
+            <column name="AUTHOR_ID" valueNumeric="32"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="33"/>
+            <column name="AUTHOR_ID" valueNumeric="33"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="34"/>
+            <column name="AUTHOR_ID" valueNumeric="34"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="35"/>
+            <column name="AUTHOR_ID" valueNumeric="35"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="36"/>
+            <column name="AUTHOR_ID" valueNumeric="36"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="37"/>
+            <column name="AUTHOR_ID" valueNumeric="37"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="38"/>
+            <column name="AUTHOR_ID" valueNumeric="38"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="39"/>
+            <column name="AUTHOR_ID" valueNumeric="39"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="40"/>
+            <column name="AUTHOR_ID" valueNumeric="40"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="1"/>
+            <column name="AUTHOR_ID" valueNumeric="41"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="2"/>
+            <column name="AUTHOR_ID" valueNumeric="42"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="3"/>
+            <column name="AUTHOR_ID" valueNumeric="43"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="5"/>
+            <column name="AUTHOR_ID" valueNumeric="45"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="22"/>
+            <column name="AUTHOR_ID" valueNumeric="22"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="4"/>
+            <column name="AUTHOR_ID" valueNumeric="4"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="4"/>
+            <column name="AUTHOR_ID" valueNumeric="44"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="4"/>
+            <column name="AUTHOR_ID" valueNumeric="3"/>
+        </insert>
+        <insert tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" valueNumeric="1"/>
+            <column name="AUTHOR_ID" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703820174-4">
+        <insert tableName="REVIEW">
+            <column name="ID" valueNumeric="1"/>
+            <column name="COMMENT_TEXT" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+            <column name="COMMENTER_NAME" value="aa"/>
+            <column name="RATING"/>
+            <column name="CREATE_DATE" valueDate="2018-01-18 00:00:00.0"/>
+            <column name="BOOK_ID" valueNumeric="1"/>
+        </insert>
+        <insert tableName="REVIEW">
+            <column name="ID" valueNumeric="2"/>
+            <column name="COMMENT_TEXT" value="Perfect book."/>
+            <column name="COMMENTER_NAME" value="emilio12"/>
+            <column name="RATING"/>
+            <column name="CREATE_DATE" valueDate="2018-01-22 00:00:00.0"/>
+            <column name="BOOK_ID" valueNumeric="4"/>
+        </insert>
+        <insert tableName="REVIEW">
+            <column name="ID" valueNumeric="3"/>
+            <column name="COMMENT_TEXT" value="perfect book"/>
+            <column name="COMMENTER_NAME" value="abc34"/>
+            <column name="CREATE_DATE" valueDate="2018-01-22 00:00:00.0"/>
+            <column name="BOOK_ID" valueNumeric="2"/>
+        </insert>
+        <insert tableName="REVIEW">
+            <column name="ID" valueNumeric="4"/>
+            <column name="COMMENT_TEXT" value="owful"/>
+            <column name="COMMENTER_NAME" value="mister8"/>
+            <column name="RATING"/>
+            <column name="CREATE_DATE" valueDate="2018-01-22 00:00:00.0"/>
+            <column name="BOOK_ID" valueNumeric="2"/>
+        </insert>
+        <insert tableName="REVIEW">
+            <column name="ID" valueNumeric="5"/>
+            <column name="COMMENT_TEXT" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."/>
+            <column name="COMMENTER_NAME" value="ipsum"/>
+            <column name="RATING"/>
+            <column name="CREATE_DATE" valueDate="2018-01-22 00:00:00.0"/>
+            <column name="BOOK_ID" valueNumeric="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

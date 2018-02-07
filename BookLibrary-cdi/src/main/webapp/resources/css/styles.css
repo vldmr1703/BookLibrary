@@ -1,0 +1,68 @@
+.largeText {
+    font-size: large;
+}
+
+.tableHead {
+    background-color: white !important;
+    background-image: none !important;
+}
+
+.ref > span {
+    background-color: white;
+    background-image: none;
+}
+
+.ref > a {
+    background-color: white;
+    background-image: none;
+}
+
+.align {
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+.input {
+    width: 400px;
+    height: 300px;
+}
+
+.border > div {
+    padding: 0;
+}
+
+.border {
+    border: none !important;
+}
+
+button, input[type="reset"], input[type="submit"], input[type="button"] {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.margin-details {
+    margin-left: 60px;
+}
+
+.seeReviews {
+    width: 29em;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    background-color: #343a40 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+.footer > div {
+    color: white !important;
+}

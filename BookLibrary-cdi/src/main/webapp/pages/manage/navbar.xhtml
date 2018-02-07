@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="collapse navbar-collapse">
+            <a4j:commandLink styleClass="navbar-brand" value="HOME" execute="@this"
+                             action="/pages/home?faces-redirect=true"/>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a4j:commandLink styleClass="nav-link" value="BOOKS" execute="@this"
+                                     action="/pages/manage/manageBooks?faces-redirect=true">
+                    </a4j:commandLink>
+                </li>
+                <li class="nav-item">
+                    <a4j:commandLink styleClass="nav-link" value="AUTHORS" execute="@this"
+                                     action="/pages/manage/manageAuthors?faces-redirect=true">
+                    </a4j:commandLink>
+                </li>
+                <li class="nav-item">
+                    <a4j:commandLink styleClass="nav-link" value="REVIEW" execute="@this"
+                                     action="/pages/manage/review?faces-redirect=true">
+                    </a4j:commandLink>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</ui:composition>
+</html>

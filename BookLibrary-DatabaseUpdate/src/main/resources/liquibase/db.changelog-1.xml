@@ -1,0 +1,104 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="vtkac (generated)" id="1516703757691-1">
+        <createSequence cacheSize="20" cycle="false" incrementBy="1" maxValue="9999999999999999999999999999"
+                        minValue="1" ordered="false" sequenceName="AUTHOR_ID_SEQ" startValue="50000"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-2">
+        <createSequence cacheSize="20" cycle="false" incrementBy="1" maxValue="9999999999999999999999999999"
+                        minValue="1" ordered="false" sequenceName="BOOK_ID_SEQ" startValue="50000"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-3">
+        <createSequence cacheSize="20" cycle="false" incrementBy="1" maxValue="9999999999999999999999999999"
+                        minValue="1" ordered="false" sequenceName="REVIEW_ID_SEQ" startValue="50000"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-4">
+        <createTable tableName="AUTHOR">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FIRST_NAME" type="VARCHAR2(20 BYTE)"/>
+            <column name="SECOND_NAME" type="VARCHAR2(20 BYTE)"/>
+            <column name="RATING" type="NUMBER(*, 0)"/>
+            <column name="CREATE_DATE" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-5">
+        <createTable tableName="BOOK">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PUBLISHED_YEAR" type="NUMBER(*, 0)"/>
+            <column name="ISBN" type="VARCHAR2(20 BYTE)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PUBLISHER" type="VARCHAR2(255 BYTE)"/>
+            <column name="RATING" type="NUMBER(*, 0)"/>
+            <column name="CREATE_DATE" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-6">
+        <createTable tableName="BOOK_AUTHOR">
+            <column name="BOOK_ID" type="NUMBER(*, 0)"/>
+            <column name="AUTHOR_ID" type="NUMBER(*, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-7">
+        <createTable tableName="REVIEW">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="COMMENT_TEXT" type="VARCHAR2(500 BYTE)"/>
+            <column name="COMMENTER_NAME" type="VARCHAR2(20 BYTE)"/>
+            <column name="RATING" type="NUMBER(*, 0)"/>
+            <column name="CREATE_DATE" type="date"/>
+            <column name="BOOK_ID" type="NUMBER(*, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-8">
+        <createIndex indexName="SYS_C007442" tableName="BOOK" unique="true">
+            <column name="ID"/>
+        </createIndex>
+        <addPrimaryKey columnNames="ID" constraintName="SYS_C007442" forIndexName="SYS_C007442" tableName="BOOK"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-9">
+        <createIndex indexName="SYS_C007444" tableName="AUTHOR" unique="true">
+            <column name="ID"/>
+        </createIndex>
+        <addPrimaryKey columnNames="ID" constraintName="SYS_C007444" forIndexName="SYS_C007444" tableName="AUTHOR"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-10">
+        <createIndex indexName="SYS_C007445" tableName="REVIEW" unique="true">
+            <column name="ID"/>
+        </createIndex>
+        <addPrimaryKey columnNames="ID" constraintName="SYS_C007445" forIndexName="SYS_C007445" tableName="REVIEW"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-11">
+        <createIndex indexName="SYS_C007443" tableName="BOOK" unique="true">
+            <column name="ISBN"/>
+        </createIndex>
+        <addUniqueConstraint columnNames="ISBN" constraintName="SYS_C007443" forIndexName="SYS_C007443"
+                             tableName="BOOK"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-12">
+        <addForeignKeyConstraint baseColumnNames="BOOK_ID" baseTableName="REVIEW" constraintName="SYS_C007446"
+                                 deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT"
+                                 referencedColumnNames="ID" referencedTableName="BOOK"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-13">
+        <addForeignKeyConstraint baseColumnNames="BOOK_ID" baseTableName="BOOK_AUTHOR" constraintName="SYS_C007447"
+                                 deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT"
+                                 referencedColumnNames="ID" referencedTableName="BOOK"/>
+    </changeSet>
+    <changeSet author="vtkac (generated)" id="1516703757691-14">
+        <addForeignKeyConstraint baseColumnNames="AUTHOR_ID" baseTableName="BOOK_AUTHOR" constraintName="SYS_C007448"
+                                 deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT"
+                                 referencedColumnNames="ID" referencedTableName="AUTHOR"/>
+    </changeSet>
+</databaseChangeLog>

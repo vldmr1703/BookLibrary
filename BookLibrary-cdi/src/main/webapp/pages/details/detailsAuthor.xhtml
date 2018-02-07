@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/pages/home.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid>
+                <rich:panel styleClass="card" headerClass="card-header">
+                    <f:facet name="header">
+                        <h:outputText value="Author detailed information"/>
+                    </f:facet>
+                    <h:panelGrid columns="2" id="mainGrid">
+                        <h:outputText value="First Name:" styleClass="label"/>
+                        <h:outputText value="#{authorAction.author.firstName}"/>
+                        <h:outputText value="Second Name:" styleClass="label"/>
+                        <h:outputText value="#{authorAction.author.secondName}"/>
+                        <h:outputText value="Create date:" styleClass="label"/>
+                        <h:outputText value="#{authorAction.author.createDate}"/>
+                        <h:outputText value="Books:" styleClass="label"/>
+                        <a4j:repeat value="#{booksArrayAction.getBooksByAuthorId(authorAction.author.id)}" var="book">
+                            <a4j:commandLink value=" #{book['name']}"
+                                             execute="@this" action="/pages/details/detailsBook?faces-redirect=true">
+                                <a4j:param value="#{book['id']}" assignTo="#{bookAction.bookId}"/>
+                            </a4j:commandLink>
+                            <br/>
+                        </a4j:repeat>
+                        <h:outputText value="Rating:" styleClass="label"/>
+                        <rich:panel styleClass="border">
+                            <ui:include src="/pages/rating.xhtml">
+                                <ui:param name="rating" value="#{authorAction.author.rating}"/>
+                            </ui:include>
+                        </rich:panel>
+                    </h:panelGrid>
+                </rich:panel>
+            </h:panelGrid>
+            <a4j:commandButton styleClass="no-decor" render="editGrid pickList"
+                               execute="@this" value="Edit"
+                               oncomplete="#{rich:component('editPane')}.show()">
+            </a4j:commandButton>
+
+            <rich:popupPanel header="Edit Author Details" id="editPane" height="400" width="600"
+                             domElementAttachment="parent">
+                <h:panelGrid columns="3" id="editGrid">
+                    <h:outputText value="Create Date"/>
+                    <h:outputText value="#{authorAction.author.createDate}"/>
+                    <h:panelGroup/>
+                    <h:outputText value="Rating"/>
+                    <rich:panel styleClass="border">
+                        <ui:include src="/pages/rating.xhtml">
+                            <ui:param name="rating" value="#{authorAction.author.rating}"/>
+                        </ui:include>
+                    </rich:panel>
+                    <h:panelGroup/>
+                    <h:outputText value="First Name"/>
+                    <h:inputText value="#{authorAction.author.firstName}" id="firstName">
+                        <rich:validator/>
+                    </h:inputText>
+                    <rich:message id="firstNameMsg" for="firstName"/>
+                    <h:outputText value="Second Name"/>
+                    <h:inputText value="#{authorAction.author.secondName}" id="secondName">
+                        <rich:validator/>
+                    </h:inputText>
+                    <rich:message id="secondNameMsg" for="secondName"/>
+                </h:panelGrid>
+
+                <rich:panel style="width:560px;">
+                    <f:facet name="header">
+                        <h:outputText value="Simple pick list"/>
+                    </f:facet>
+                    <rich:pickList id="pickList" value="#{authorAction.bookIds}"
+                                   sourceCaption="Available books" targetCaption="Selected books" listWidth="165px"
+                                   listHeight="100px" orderable="true">
+                        <f:selectItems value="#{booksArrayAction.allBooks}" var="book" itemValue="#{book.id}"
+                                       itemLabel="#{book.name}"/>
+                    </rich:pickList>
+
+                </rich:panel>
+                <a4j:commandButton value="Update" action="#{authorAction.updateAuthor}" render="mainGrid"
+                                   execute="editPane"
+                                   oncomplete="if (#{facesContext.maximumSeverity==null}) {#{rich:component('editPane')}.hide();}"/>
+                <a4j:commandButton value="Cancel" onclick="#{rich:component('editPane')}.hide(); return false;"/>
+            </rich:popupPanel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

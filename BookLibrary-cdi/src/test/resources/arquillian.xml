@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://jboss.org/schema/arquillian"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian http://www.jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <container qualifier="wildfly" default="true">
+        <configuration>
+            <property name="allowConnectingToRunningServer">true</property>
+            <property name="jbossHome">C:\Users\vtkac\Documents\wildfly-11.0.0.Final\wildfly-11.0.0.Final</property>
+            <property name="modulePath">C:\Users\vtkac\Documents\wildfly-11.0.0.Final\wildfly-11.0.0.Final\modules
+            </property>
+        </configuration>
+    </container>
+    <extension qualifier="persistence-dbunit">
+        <property name="datatypeFactory">org.dbunit.ext.h2.H2DataTypeFactory</property>
+    </extension>
+</arquillian>

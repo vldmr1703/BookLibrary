@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <author  id="1001" first_name="First" second_name="Author" create_date="2018-02-01"/>
+    <author  id="1002" first_name="Second" second_name="Author" create_date="2018-02-01"/>
+    <author  id="1003" first_name="Updated" second_name="Author" create_date="2018-02-01"/>
+</dataset>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <book  id="1001" name="First Book" rating="3" published_year="1980" isbn="978-0-590-52068-4" publisher="Hoakin" create_date="2018-02-01"/>
+    <book  id="1002" name="Second Book" rating="1" published_year="1997" isbn="978-0-590-52062-4" publisher="John" create_date="2018-02-01"/>
+    <book  id="1003" name="Third Book" rating="1" published_year="2000" isbn="978-0-590-52018-4" publisher="Alex" create_date="2018-02-01"/>
+
+    <author id="1001" first_name="Andrew" rating="1" second_name="Hunt" create_date="2018-02-01"/>
+    <author id="1002" first_name="Stevenson" second_name="McConnel" create_date="2018-02-01"/>
+
+    <book_author author_id="1001" book_id="1002"/>
+</dataset>

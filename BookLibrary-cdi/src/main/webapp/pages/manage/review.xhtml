@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:rich="http://richfaces.org/rich">
+
+<ui:composition template="/pages/home.xhtml">
+    <ui:define name="content">
+        <h:form id="namageReviewForm" styleClass="align">
+            <f:event type="preRenderView" listener="#{reviewAction.onLoad}"/>
+            <rich:panel styleClass="card" headerClass="card-header">
+                <f:facet name="header">
+                    <h:outputText value="Books reviews"/>
+                </f:facet>
+                <h:panelGrid columns="2" id="mainGrid">
+                    <a4j:repeat value="#{reviewAction.stars}" var="star">
+                        <h:outputText value="#{star} stars "/>
+                        <ui:include src="/pages/rating.xhtml">
+                            <ui:param name="rating" value="#{star}"/>
+                        </ui:include>
+                        <rich:collapsiblePanel header="#{reviewAction.starMap[star]} books"
+                                               switchType="client" expanded="false" style="margin-bottom: 10px;">
+                            <a4j:repeat value="#{booksArrayAction.getBooksByRating(star)}" var="book">
+                                <li style="margin-bottom: 10px;">
+                                    <a4j:commandLink value=" #{book['name']}"
+                                                     action="/pages/details/detailsBook?faces-redirect=true">
+                                        <a4j:param value="#{book['id']}" assignTo="#{bookAction.bookId}"/>
+                                    </a4j:commandLink>
+                                </li>
+                            </a4j:repeat>
+                        </rich:collapsiblePanel>
+                    </a4j:repeat>
+                </h:panelGrid>
+            </rich:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
